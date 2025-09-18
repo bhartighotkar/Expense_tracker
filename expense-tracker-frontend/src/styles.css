@@ -1,0 +1,78 @@
+/* 🌤️ Background and Typography */
+body {
+  background-color: #f0f4f8;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* 🧩 Card Styling */
+.card {
+  border: none;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* 🎯 Buttons */
+.btn-success {
+  background-color: #198754;
+  border: none;
+  font-weight: 500;
+}
+
+.btn-success:hover {
+  background-color: #157347;
+}
+
+/* 📊 Table Styling */
+.table th {
+  background-color: #0d6efd;
+  color: #fff;
+}
+
+.table td, .table th {
+  vertical-align: middle;
+}
+
+/* 🧠 Form Inputs */
+.form-control, .form-select {
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  transition: border-color 0.2s ease;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: #0d6efd;
+  box-shadow: none;
+}
+
+/* 📈 Chart Container */
+.chart-container {
+  padding: 1rem;
+  background-color: #e9f5ff;
+  border-radius: 12px;
+}
+
+/* 🦶 Footer */
+footer {
+  background-color: #ffffff;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  border-top: 1px solid #dee2e6;
+}
+
+footer a {
+  color: #0d6efd;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
