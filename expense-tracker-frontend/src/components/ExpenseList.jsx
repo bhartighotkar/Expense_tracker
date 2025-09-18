@@ -1,14 +1,14 @@
 import axios from '../api/axios';
 
 function ExpenseList({ expenses, onDelete }) {
-  const handleDelete = async (id) => {
-    try {
-      await axios.delete(`/expenses/${id}`);
-      onDelete(id); // Update local state
-    } catch (err) {
-      console.error('Error deleting expense:', err);
-    }
-  };
+const handleDelete = async (id) => {
+  try {
+    await axios.delete(`http://localhost:5000/api/expenses/${id}`);
+    // Optionally update state or show toast
+  } catch (err) {
+    console.error("Error deleting expense:", err);
+  }
+};
 
   return (
     <div className="card m-3 p-3 shadow-sm">
@@ -17,10 +17,10 @@ function ExpenseList({ expenses, onDelete }) {
         <thead>
           <tr>
             <th>Title</th>
-            <th>Amount (₹)</th>
+            <th>Amount</th>
             <th>Category</th>
             <th>Date</th>
-            <th>Action</th> {/* ✅ New column */}
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>
@@ -33,7 +33,7 @@ function ExpenseList({ expenses, onDelete }) {
               <td>
                 <button
                   className="btn btn-sm btn-outline-danger"
-                  onClick={() => handleDelete(expense._id)}
+                  onClick={() => onDelete(expense._id)}
                 >
                   <i className="bi bi-trash"></i> {/* Bootstrap trash icon */}
                 </button>

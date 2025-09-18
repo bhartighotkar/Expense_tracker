@@ -145,15 +145,16 @@ function App() {
       </div>
 
       <div className="container">
-        <div className="row">
-          <div className="col-md-6">
-            <ExpenseForm onAddExpense={handleAddExpense} />
-          </div>
-          <div className="col-md-6">
-            <Summary expenses={expenses} />
-            <Chart expenses={expenses} />
-          </div>
-        </div>
+<div className="row">
+  <div className="col-md-6">
+    <ExpenseForm onAddExpense={fetchExpenses} /> {/* ✅ Updated line */}
+  </div>
+  <div className="col-md-6">
+    <Summary expenses={expenses} />
+    <Chart expenses={expenses} />
+  </div>
+</div>
+
 
         <ExpenseList expenses={expenses} onDelete={handleDeleteExpense} />
         <ToastContainer position="top-right" autoClose={3000} />
